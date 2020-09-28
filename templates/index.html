@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>User 1</h1>
+    {% if user1 %}
+    <h2>Hi {{ user1["display_name"] }}
+        <small><a href="/sign_out">[sign out]<a /></small></h2>
+    <a href="/playlists">my playlists</a>
+    <a href="/currently_playing">currently playing</a>
+    <a href="/current_user">me</a>
+    {% else %}
+    <h2><a href="{{auth_1}}">Sign in</a></h2>
+    {% endif %}
+
+    <h1>User 2</h1>
+    {% if user2 %}
+    <h2>Hi {{ user2["display_name"] }}
+        <small><a href="/sign_out">[sign out]<a /></small></h2>
+    <a href="/playlists">my playlists</a>
+    <a href="/currently_playing">currently playing</a>
+    <a href="/current_user">me</a>
+    {% else %}
+    <h2><a href="{{auth_2}}">Sign in</a></h2>
+    {% endif %}
+
+    <h3><a href="/sign_out/1">clear cache</a></h3>
+</body>
+
+</html>
