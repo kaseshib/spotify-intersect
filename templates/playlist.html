@@ -13,6 +13,25 @@
 {% block content %}
 <h1>Spotify Intersect</h1>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#test').bind('click', function() {
+            $.getJSON('/saveplaylist',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+</script>
+
+<div class='container'>
+    <form>
+        <a href=# id=test><button class='btn btn-default'>Save Playlist</button></a>
+    </form>
+
+</div>
 
 <table>
     <tr>

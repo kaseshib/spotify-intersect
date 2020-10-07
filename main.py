@@ -29,10 +29,8 @@ def session_cache_path(user):
 def clear_caches():
     try:
         if session.get('uuid_1') and os.path.exists(session_cache_path(1)):
-            print('yeaaaa')
             os.remove(session_cache_path(1))
         if session.get('uuid_2') and os.path.exists(session_cache_path(2)):
-            print('ookmkkkk')
             os.remove(session_cache_path(2))
         session.clear()
     except OSError as e:
@@ -150,18 +148,17 @@ def index():
     # return render_template('index.html', user1=user1, user2=user2,  auth_1=auth_url_1, auth_2=auth_url_2)
     # return render_template('index.html', user1=spotify_1.me(), user2=spotify_2.me(), auth_1=auth_url_1, auth_2=auth_url_2)
 
+# @ app.route()
+
 
 @ app.route('/callback/')
 def callback():
     auth_manager_1 = spotipy.oauth2.SpotifyOAuth(
         scope='user-library-read playlist-modify-private', cache_path=session_cache_path(1), show_dialog=True)
 
-    print('got here')
     if not auth_manager_1.get_cached_token():
         auth_manager_1.get_access_token(request.args.get("code"))
         session['uuid_2'] = str(uuid.uuid4())
-
-        print('in here too')
 
         auth_manager_2 = spotipy.oauth2.SpotifyOAuth(
             scope='user-library-read playlist-modify-private', cache_path=session_cache_path(2), show_dialog=True)
@@ -173,49 +170,8 @@ def callback():
             scope='user-library-read playlist-modify-private', cache_path=session_cache_path(2), show_dialog=True)
 
         auth_manager_2.get_access_token(request.args.get("code"))
-        return redirect(url_for('playlist'))
-
-
-# @ app.route('/sign_out/<user>')
-
-    # other_user = "1" if user == "2" else "2"
-    # try:
-    #     # Remove the CACHE file (.cache-test) so that a new user can authorize.
-    #     print("signing out...")
-    #     os.remove(session_cache_path(user))
-
-    #     if not os.path.exists(session_cache_path(other_user)):
-    #         print('-- other user --', other_user)
-    #         print('-- user -- ', user)
-    #         session.clear()
-    # except OSError as e:
-    #     print("Error: %s - %s." % (e.filename, e.strerror))
-    # return redirect('/')
-
-
-# @ app.route('/playlists/<user>')
-# def playlists(user):
-#     auth_manager = spotipy.oauth2.SpotifyOAuth(
-#         cache_path=session_cache_path(user))
-#     if not auth_manager.get_cached_token():
-#         return redirect('/')
-
-#     spotify = spotipy.Spotify(auth_manager=auth_manager)
-#     return spotify.current_user_playlists()
-
-
-# @ app.route('/current_user/<user>')
-# def current_user(user):
-#     auth_manager = spotipy.oauth2.SpotifyOAuth(
-#         cache_path=session_cache_path(user))
-#     if not auth_manager.get_cached_token():
-#         return redirect('/')
-#     spotify = spotipy.Spotify(auth_manager=auth_manager)
-#     return spotify.current_user()
-
-@ app.route('/test')
-def test():
-    return 'hello there'
+        return render_template('loading.html')
+        # return redirect(url_for('playlist'))
 
 
 @ app.route('/playlist')
@@ -229,9 +185,20 @@ def playlist():
     user2 = spotipy.Spotify(auth_manager=auth2)
 
     both = intersect.setIntersect(user1, user2)
+    session['playlist'] = both
     # intersect.savePlaylist(user1, both)
 
     return render_template('playlist.html', songs=both)
+
+
+@ app.route('/saveplaylist')
+def savePlaylist():
+    auth1 = spotipy.oauth2.SpotifyOAuth(
+        cache_path=session_cache_path(1))
+    user1 = spotipy.Spotify(auth_manager=auth1)
+    both = session['playlist']
+    intersect.savePlaylist(user1, both)
+    return("saved successfully")
 
 
 if __name__ == "__main__":

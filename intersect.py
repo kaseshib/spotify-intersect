@@ -13,8 +13,6 @@ class Song():
 
     def __eq__(self, other):
         return self.id == other.id
-        # return self._name == other.getName() and \
-        #     self._artist == other.getArtist()
 
     def __hash__(self):
         return hash(self.id)
@@ -30,18 +28,13 @@ def allLiked(user):
             track = item['track']
             user_set.add(
                 Song(track['name'], track['artists'][0]['name'], track['id']))
-            # if index % 10 == 0:
-            #     print(index_at + index + 1, ' - ', track['name'], ' - ',
-            #           track['artists'][0]['name'], ' - ', track['id'])
         index_at += 50
-        print(index_at)
+        # print(index_at)
         results = user.current_user_saved_tracks(limit=50, offset=index_at)
-    print("leaving function...")
     return user_set
 
 
 def setIntersect(user1, user2):
-    print('ahahh')
     set1 = allLiked(user1)
     print('-- done with user1 --')
     set2 = allLiked(user2)
