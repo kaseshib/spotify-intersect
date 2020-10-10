@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends "base.html" %}
 
-{% block title %}User 1{% endblock %}
+{% block title %}Playlist{% endblock %}
 {% block head %}
 {{ super() }}
 
@@ -11,9 +8,9 @@
 
 
 {% block content %}
-<h1>Spotify Intersect</h1>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <script type=text/javascript>
         $(function() {
           $('a#test').bind('click', function() {
@@ -26,29 +23,49 @@
         });
 </script>
 
+<!-- <h2 class="text-center">Congrats!</h2> -->
+<h2 class="text-center">{{songs|length}} songs in common!</h2>
+
+<!-- <div class='container'>
+    <form>
+        <a href=# id=test>
+            <button class='btn btn-success col-lg-4 col-lg-offset-4'>Save Playlist to
+                Spotify</button>
+        </a>
+    </form>
+
+</div> -->
+
 <div class='container'>
     <form>
-        <a href=# id=test><button class='btn btn-default'>Save Playlist</button></a>
+
+        <button class='btn btn-success col-lg-4 col-lg-offset-4'><a href=# id=test>Save Playlist to
+                Spotify</a></button>
     </form>
 
 </div>
 
-<table>
-    <tr>
-        <th>Song</th>
-        <th>Artist</th>
-    </tr>
-    {% for song in songs %}
-    <tr>
-        <td>{{song.name}}</td>
-        <td>{{song.artist}}</td>
-    </tr>
-    {% endfor %}
+
+
+
+<table class="table table-dark table-hover table-fixed">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Song</th>
+            <th scope="col">Artist</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for song in songs %}
+        <tr>
+            <th>{{loop.index}}</th>
+            <td>{{song.name}}</td>
+            <td>{{song.artist}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
 
 
 {% endblock %}
-
-
-
-</html>

@@ -176,6 +176,10 @@ def callback():
 
 @ app.route('/playlist')
 def playlist():
+    if session.get('playlist'):
+        both = session['playlist']
+        return render_template('playlist.html', songs=both)
+
     auth1 = spotipy.oauth2.SpotifyOAuth(
         cache_path=session_cache_path(1))
     auth2 = spotipy.oauth2.SpotifyOAuth(
@@ -196,8 +200,15 @@ def savePlaylist():
     auth1 = spotipy.oauth2.SpotifyOAuth(
         cache_path=session_cache_path(1))
     user1 = spotipy.Spotify(auth_manager=auth1)
-    both = session['playlist']
-    intersect.savePlaylist(user1, both)
+
+    auth2 = spotipy.oauth2.SpotifyOAuth(
+        cache_path=session_cache_path(2))
+    user2 = spotipy.Spotify(auth_manager=auth2)
+    if session.get('playlist'):
+        both = session['playlist']
+    else:
+        return redirect(url_for('index'))
+    intersect.savePlaylist(user1, user2, both)
     return("saved successfully")
 
 

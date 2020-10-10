@@ -1,0 +1,43 @@
+body {
+    height: 100%;
+    background-color: #343a40 !important;
+    color: white;
+}
+
+.table.table-ellipsis tbody td {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+  }
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    width: 10%
+}
+
+.table{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+button {
+    display: block !important;
+    /* margin-left: auto !important;
+    margin-right: auto !important; */
+    color: white !important;
+    margin: 3% auto 3% auto !important;
+}
+
+a, a:hover {
+    color:white;
+}
+
+/* a:hover{
+    color:white
+} */

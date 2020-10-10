@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
 {% extends "base.html" %}
 
-{% block title %}User 1{% endblock %}
+{% block title %}Sign In{% endblock %}
 {% block head %}
 {{ super() }}
 
@@ -11,17 +8,13 @@
 
 
 {% block content %}
-<h1>Spotify Intersect</h1>
-<p>
+
+<p class="center">
     {% if first %}User 1,
     {% else %}User 2,{% endif %}
     Please sign in.
 
-<h2><a href="{{url}}">Sign in</a></h2>
+<h2 class="center"><a href="{{url}}">Sign in</a></h2>
 
 
 {% endblock %}
-
-
-
-</html>
