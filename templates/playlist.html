@@ -13,32 +13,28 @@
 
 <script type=text/javascript>
         $(function() {
-          $('a#test').bind('click', function() {
+          $('button').on('click', function() {
+            this.disabled = true;
+            this.innerHTML = "Playlist Saved in Spotify!";
+            this.style.backgroundColor = "gray";
+            this.style.border = "none"
+
             $.getJSON('/saveplaylist',
                 function(data) {
               //do nothing
+
             });
+            
             return false;
           });
         });
 </script>
 
-<!-- <h2 class="text-center">Congrats!</h2> -->
 <h2 class="text-center">{{songs|length}} songs in common!</h2>
 
-<!-- <div class='container'>
-    <form>
-        <a href=# id=test>
-            <button class='btn btn-success col-lg-4 col-lg-offset-4'>Save Playlist to
-                Spotify</button>
-        </a>
-    </form>
-
-</div> -->
 
 <div class='container'>
     <form>
-
         <button class='btn btn-success col-lg-4 col-lg-offset-4'><a href=# id=test>Save Playlist to
                 Spotify</a></button>
     </form>
@@ -51,16 +47,16 @@
 <table class="table table-dark table-hover table-fixed">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Song</th>
-            <th scope="col">Artist</th>
+            <th class="info" scope="col">#</th>
+            <th class="info" scope="col">Song</th>
+            <th class="info" scope="col">Artist</th>
         </tr>
     </thead>
     <tbody>
         {% for song in songs %}
         <tr>
             <th>{{loop.index}}</th>
-            <td>{{song.name}}</td>
+            <td class="song">{{song.name}}</td>
             <td>{{song.artist}}</td>
         </tr>
         {% endfor %}

@@ -1,14 +1,41 @@
-body {
+html{
     height: 100%;
-    background-color: #343a40 !important;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    /* background-image: url("https://www.inspirien.net/wp-content/uploads/2016/09/Generic-Background-2-Blue_WEB_BACKGROUND_DARK_1.jpg"); */
+    /* background-image: url("https://www.earlham.lib.ia.us/theme_resources/colorfulrecordbackground/image"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin:0;
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%);
+    /* background-color: #343a40 !important; */
     color: white;
 }
 
-.table.table-ellipsis tbody td {
+/* .table.table-ellipsis tbody td {
     max-width: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
+  } */
+
+/* th{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+} */
+
+th.info{
+    /* background: white; */
+    position: sticky;
+    top: 0;
+    background-color:#343a40;
+    /* border-bottom: 1px solid #dee2e6; */
+    border-top: none !important;
   }
 
 .logo {
@@ -23,7 +50,30 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
+    width: 65%;
+    height: 270px;
+    overflow-y: scroll;
+    position: relative;
+    border-collapse: collapse;
+}
+
+.table::-webkit-scrollbar {
+    width: 1em;
+}
+ 
+.table::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.table::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+
+tbody {
+    overflow: auto;
+    /* height: 100px; */
 }
 
 button {
@@ -37,6 +87,17 @@ button {
 a, a:hover {
     color:white;
 }
+
+.center {
+    text-align: center;
+}
+
+/* td.song {
+    /* max-width: 200px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+} */
 
 /* a:hover{
     color:white
