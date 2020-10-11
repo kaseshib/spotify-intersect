@@ -1,45 +1,21 @@
 html{
     height: 100%;
 }
+
 body {
-    /* font-family: 'Roboto', sans-serif; */
-
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
     height: 100%;
-    /* background-image: url("https://www.inspirien.net/wp-content/uploads/2016/09/Generic-Background-2-Blue_WEB_BACKGROUND_DARK_1.jpg"); */
-    /* background-image: url("https://www.earlham.lib.ia.us/theme_resources/colorfulrecordbackground/image"); */
-    /* background-image: url('triangles.png'); */
     background-image: url('Background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0;
-    /* background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%); */
-    /* background-color: #343a40 !important; */
     color: white;
 }
 
-/* .table.table-ellipsis tbody td {
-    max-width: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-  } */
-
-/* th{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-} */
-
 th.info{
-    /* background: white; */
     position: sticky;
     top: 0;
     background-color:#343a40;
-    /* border-bottom: 1px solid #dee2e6; */
     border-top: none !important;
   }
 
@@ -48,7 +24,6 @@ th.info{
     margin-left: auto;
     margin-right: auto;
     margin-top: 5vh;
-    /* margin-bottom: 2%; */
     width: 25vh;
 }
 
@@ -78,16 +53,12 @@ th.info{
   /* outline: 1px solid slategrey; */
 }
 
-
 tbody {
     overflow: auto;
-    /* height: 100px; */
 }
 
 button {
     display: block !important;
-    /* margin-left: auto !important;
-    margin-right: auto !important; */
     color: white !important;
     margin: 3% auto 3% auto !important;
 }
@@ -106,22 +77,11 @@ a, a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* right: auto; */
 }
 
 .title .text-center {
     font-size: 10vh !important;
 }
-/* td.song {
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-} */
-
-/* a:hover{
-    color:white
-} */
 
 .sign {
     padding: 0.2em 0.3em;
