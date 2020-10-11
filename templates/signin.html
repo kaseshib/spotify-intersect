@@ -9,12 +9,15 @@
 
 {% block content %}
 
+<h3 class="center">How similar are your tastes?</h3>
+<br>
 <p class="center">
-    {% if first %}User 1,
+    {% if first %}
+    User 1,
     {% else %}User 2,{% endif %}
     Please sign in.
 
-<h2 class="center"><a href="{{url}}" class="sign">Sign in</a></h2>
+<h2 class="center"><a href="{{url}}" class="sign">Sign in to Spotify</a></h2>
 
 
 {% endblock %}

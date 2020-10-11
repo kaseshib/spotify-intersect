@@ -47,16 +47,19 @@ th.info{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5vh;
     /* margin-bottom: 2%; */
-    width: 25%
+    width: 25vh;
 }
 
 .table{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
-    height: 270px;
+    min-width: 65%;
+    max-width: 800px;
+    /* height: 270px; */
+    height: 40vh;
     overflow-y: scroll;
     position: relative;
     border-collapse: collapse;
@@ -72,7 +75,7 @@ th.info{
  
 .table::-webkit-scrollbar-thumb {
   background-color: darkgrey;
-  outline: 1px solid slategrey;
+  /* outline: 1px solid slategrey; */
 }
 
 
@@ -107,7 +110,7 @@ a, a:hover {
 }
 
 .title .text-center {
-    font-size: 6em !important;
+    font-size: 10vh !important;
 }
 /* td.song {
     max-width: 200px;
@@ -121,7 +124,7 @@ a, a:hover {
 } */
 
 .sign {
-    padding: 0.2em;
+    padding: 0.2em 0.3em;
     background: darkslategray;
     border-radius: 0.4em;
 }
