@@ -2,15 +2,20 @@ html{
     height: 100%;
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
     height: 100%;
     /* background-image: url("https://www.inspirien.net/wp-content/uploads/2016/09/Generic-Background-2-Blue_WEB_BACKGROUND_DARK_1.jpg"); */
     /* background-image: url("https://www.earlham.lib.ia.us/theme_resources/colorfulrecordbackground/image"); */
+    /* background-image: url('triangles.png'); */
+    background-image: url('Background.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin:0;
-    background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%);
+    /* background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%); */
     /* background-color: #343a40 !important; */
     color: white;
 }
@@ -42,8 +47,8 @@ th.info{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2%;
-    width: 10%
+    /* margin-bottom: 2%; */
+    width: 25%
 }
 
 .table{
@@ -86,14 +91,26 @@ button {
 
 a, a:hover {
     color:white;
+    text-decoration: none;
 }
 
 .center {
     text-align: center;
 }
 
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* right: auto; */
+}
+
+.title .text-center {
+    font-size: 6em !important;
+}
 /* td.song {
-    /* max-width: 200px; */
+    max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -102,3 +119,9 @@ a, a:hover {
 /* a:hover{
     color:white
 } */
+
+.sign {
+    padding: 0.2em;
+    background: darkslategray;
+    border-radius: 0.4em;
+}

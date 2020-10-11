@@ -20,16 +20,17 @@
 </head>
 
 <body>
-    <a href="/">
-        <h1 class="text-center">Spotify Intersect</h1>
-    </a>
-    <!-- <-- <img src="/static/venn.png" alt="" class='logo'> -->
-
-    <img src="/static/venn-01.png" class='logo'>
-
-    <div id="content">{% block content %}{% endblock %}</div>
+    <div class="container">
+        <a class="title" href="/">
+            <img src="/static/venn-01.png" class='logo'>
+            <h1 class="text-center">Spotify Intersect</h1>
+        </a>
 
 
+
+        <div id="content">{% block content %}{% endblock %}</div>
+
+    </div>
 
 
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
