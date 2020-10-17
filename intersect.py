@@ -21,7 +21,10 @@ class Song():
 def allLiked(user):
     user_set = set()
     index_at = 0
-    results = user.current_user_saved_tracks(limit=50, offset=index_at)
+    try:
+        results = user.current_user_saved_tracks(limit=50, offset=index_at)
+    except:
+        return user_set
 
     while results['items']:
         for index, item in enumerate(results['items']):

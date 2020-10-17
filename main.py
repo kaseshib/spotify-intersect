@@ -95,8 +95,10 @@ def playlist():
 
 @ app.route('/saveplaylist')
 def savePlaylist():
+    print("flask: saving playlist")
     if not session.get('uuid_1') or not session.get('uuid_2'):
         return render_template('error.html')
+
     auth1 = spotipy.oauth2.SpotifyOAuth(
         cache_path=session_cache_path(1))
     user1 = spotipy.Spotify(auth_manager=auth1)
@@ -104,10 +106,12 @@ def savePlaylist():
     auth2 = spotipy.oauth2.SpotifyOAuth(
         cache_path=session_cache_path(2))
     user2 = spotipy.Spotify(auth_manager=auth2)
+
     if session.get('playlist'):
         both = session['playlist']
     else:
         return redirect(url_for('index'))
+
     intersect.savePlaylist(user1, user2, both)
     return("saved successfully")
 
