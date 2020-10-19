@@ -101,3 +101,11 @@ a, a:hover {
     background: darkslategray;
     border-radius: 0.4em;
 }
+
+#github {
+    width: 5vh;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
