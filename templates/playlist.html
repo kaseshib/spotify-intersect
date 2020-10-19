@@ -29,9 +29,9 @@
         <tbody>
             {% for song in songs %}
             <tr>
-                <td>{{loop.index}}</th>
+                <td class="index">{{loop.index}}</td>
                 <td class="song">{{song.name}}</td>
-                <td>{{song.artist}}</td>
+                <td class="artist">{{song.artist}}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -42,27 +42,7 @@
 {% block scripts %}
 
 {{ super() }}
-<!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script> -->
 
 <script src="/static/my.js"></script>
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-
-<!-- <script type=text/javascript>
-    $(function() {
-      $('button#pls').on('click', function(e) {
-        e.preventDefault()
-        $.getJSON('/saveplaylist',
-            function(data) {
-          //do nothing
-        });
-        return false;
-      });
-    });
-</script> -->
 
 {% endblock %}
