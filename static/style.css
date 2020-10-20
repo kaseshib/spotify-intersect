@@ -9,7 +9,7 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
     margin:0;
-    color: white !important;
+    color: white;
 }
 
 .container{
@@ -33,13 +33,20 @@ body {
 }
 
 #venn{
-    width: 100%
+    width: 100%;
+    margin-bottom: 2vh;
 }
 
 .title .text-center {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     line-height: 100%;
+}
+
+@media only screen and (min-width: 400px) {
+    .title .text-center {
+        font-size: 60px;
+    }
 }
 
 .index {
@@ -50,7 +57,7 @@ body {
 .fixHead {
     overflow-y: auto;
     height: 40vh;
-    min-width: 60%;
+    min-width: 55%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -101,11 +108,11 @@ tbody {
 button {
     display: block !important;
     color: white !important;
-    margin: 3vh auto 3vh auto !important;
+    margin: 3vh auto 3vh auto;
 }
 
 a, a:hover {
-    color:white !important;
+    color:white;
     text-decoration: none;
 }
 
