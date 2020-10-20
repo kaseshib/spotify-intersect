@@ -1,6 +1,6 @@
 'use strict';
 
-$('#pls').on("click", function (e) {
+$('#save').on("click", function (e) {
     e.preventDefault();
     $.getJSON('/saveplaylist',
         function (data) {
