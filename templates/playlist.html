@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<h2 class="text-center">{{songs|length}} songs in common!</h2>
+<h2 class="text-center" id="common">{{songs|length}} songs in common!</h2>
 
 <form>
     <button id="pls" class='btn btn-success col-lg-4 col-lg-offset-4'><a href=# id=test>Save Playlist to
@@ -22,8 +22,8 @@
         <thead>
             <tr>
                 <th class="info index th-sm" scope="col">#</th>
-                <th class="info song th-sm" scope="col">Song</th>
-                <th class="info artist th-sm" scope="col">Artist</th>
+                <th class="info song th-sm" scope="col">SONG</th>
+                <th class="info artist th-sm" scope="col">ARTIST</th>
             </tr>
         </thead>
         <tbody>

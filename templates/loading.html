@@ -8,19 +8,26 @@
 
 
 {% block content %}
-<p class="center">
+<p class="center notice">
     Both users authorized.
 
-<h2 class="center"><a href="/playlist" onclick="showLoading()" class="sign">Generate Playlist</a></h2>
+<h2 class="center"><a href="/playlist" class="sign">Generate Playlist</a></h2>
 
-<img src="/static/images/loading.gif" id="loading" style="display:none" />
+<img src="/static/images/loading.svg" id="loading" />
+
+{% endblock %}
+{% block scripts %}
+
+{{ super() }}
 
 <script>
-    function showLoading() {
+    $(".sign").click(function () {
+        console.log("got here")
         var loading = document.getElementById("loading");
-        loading.style.display = "block";
-        )
-    }
+        console.log(loading);
+        loading.style.display = "inline";
+        return true;
+    });
 
 </script>
 

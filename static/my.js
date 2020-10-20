@@ -2,14 +2,11 @@
 
 // $(function () {
 $('#pls').on("click", function (e) {
-
-
     e.preventDefault();
     $.getJSON('/saveplaylist',
         function (data) {
             //do nothing
         });
-    // $('button').off("click")
     console.log("saved playlist");
 
     this.disabled = true;

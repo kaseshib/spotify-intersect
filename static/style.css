@@ -3,7 +3,7 @@ html{
 }
 
 body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     height: 100%;
     background-image: url('images/Background.png');
     background-repeat: repeat;
@@ -25,19 +25,19 @@ body {
 }
 
 #header {
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
 }
 
 .index {
-    width: 7vw;
+    width: 10%;
     padding-left: 1.1rem !important;
 }
 
 .fixHead {
     overflow-y: auto;
     height: 40vh;
-    min-width: 65%;
-    max-width: 800px;
+    min-width: 60%;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,6 +66,10 @@ td.song, td.artist {
    white-space: nowrap;
 }
 
+tbody {
+    font-weight: 500;
+}
+
 .fixHead::-webkit-scrollbar {
     width: 1em;
 }
@@ -82,7 +86,7 @@ td.song, td.artist {
 button {
     display: block !important;
     color: white !important;
-    margin: 3% auto 3% auto !important;
+    margin: 3vh auto 3vh auto !important;
 }
 
 a, a:hover {
@@ -90,8 +94,18 @@ a, a:hover {
     text-decoration: none;
 }
 
+#loading {
+    display: none;
+    width: 6vh;
+}
+
 .center {
     text-align: center;
+}
+
+.notice {
+    font-size: 1.3rem;
+    font-weight: 300;
 }
 
 .container{
@@ -105,10 +119,12 @@ a, a:hover {
 
 .title .text-center {
     font-size: 60px;
+    font-weight: 700;
     line-height: 100%;
 }
 
-.text-center {
+#common {
+    font-weight: 400;
     font-size: 1.5rem;
 }
 
@@ -118,10 +134,14 @@ a, a:hover {
     border-radius: 0.4em;
 }
 
+.btn {
+    font-weight: 700;
+}
+
 #github {
     width: 4vh;
     position: absolute;
-    top: 96.5%;
+    top: 96%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
