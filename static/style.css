@@ -64,7 +64,7 @@ body {
 .table{
     width: 100%;
     margin-bottom: 0px !important;
-    border-collapse: collapse;
+    border-collapse: separate;
     text-align: left;
 }
 
