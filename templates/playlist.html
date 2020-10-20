@@ -9,8 +9,12 @@
 
 {% block content %}
 
-<h2 class="text-center" id="common">{{songs|length}} songs in common!</h2>
+<h2 class="text-center" id="common">{{songs|length}} songs in common :(</h2>
+{% if not songs|length %}
+<br>
+<h2 class="center"><a href="/" class="sign">Start Over</a></h2>
 
+{% else %}
 <form>
     <button id="pls" class='btn btn-success col-lg-4 col-lg-offset-4'><a href=# id=test>Save Playlist to
             Spotify</a></button>
@@ -37,6 +41,7 @@
         </tbody>
     </table>
 </div>
+{% endif %}
 {% endblock %}
 
 {% block scripts %}
