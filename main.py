@@ -5,7 +5,6 @@ from spotipy.oauth2 import SpotifyOAuth
 from spotipy import oauth2
 import uuid
 import os
-from pprint import pprint
 import intersect
 
 app = Flask(__name__)

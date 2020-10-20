@@ -11,7 +11,7 @@
 <p class="center notice">
     Both users authorized.
 
-<h2 class="center"><a href="/playlist" class="sign">Generate Playlist</a></h2>
+<h2 class="center"><a href="/playlist" class="sign" id="generate">Generate Playlist</a></h2>
 
 <img src="/static/images/loading.svg" id="loading" />
 
@@ -20,15 +20,6 @@
 
 {{ super() }}
 
-<script>
-    $(".sign").click(function () {
-        console.log("got here")
-        var loading = document.getElementById("loading");
-        console.log(loading);
-        loading.style.display = "inline";
-        return true;
-    });
-
-</script>
+<script src="/static/my.js"></script>
 
 {% endblock %}

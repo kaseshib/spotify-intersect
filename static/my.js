@@ -1,6 +1,5 @@
 'use strict';
 
-// $(function () {
 $('#pls').on("click", function (e) {
     e.preventDefault();
     $.getJSON('/saveplaylist',
@@ -16,6 +15,8 @@ $('#pls').on("click", function (e) {
     return false;
 });
 
-
-
-// });
+$("#generate").on("click", function () {
+    var loading = document.getElementById("loading");
+    loading.style.display = "inline";
+    return true;
+});
