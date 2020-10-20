@@ -11,6 +11,17 @@
 <p class="center">
     Both users authorized.
 
-<h2 class="center"><a href="/playlist" class="sign">Generate Playlist</a></h2>
+<h2 class="center"><a href="/playlist" onclick="showLoading()" class="sign">Generate Playlist</a></h2>
+
+<img src="/static/images/loading.gif" id="loading" style="display:none" />
+
+<script>
+    function showLoading() {
+        var loading = document.getElementById("loading");
+        loading.style.display = "block";
+        )
+    }
+
+</script>
 
 {% endblock %}

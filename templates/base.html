@@ -21,10 +21,14 @@
 
 <body>
     <div class="container">
-        <a class="title" href="/">
-            <img src="/static/images/venn-01.png" class='logo'>
-            <h1 class="text-center">Spotify Intersect</h1>
-        </a>
+        <div id='header'>
+            <a class='logo' href="/">
+                <img id='venn' src="/static/images/venn-01.png">
+            </a>
+            <a class="title text" href="/">
+                <span class="text-center">Spotify Intersect</span>
+            </a>
+        </div>
         <div id="content">{% block content %}{% endblock %}</div>
     </div>
 
