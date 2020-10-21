@@ -29,7 +29,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 1vh;
-    width: 20vh;
+    width: 170px;
 }
 
 #venn{
@@ -46,6 +46,9 @@ body {
 @media only screen and (min-width: 485px) {
     .title .text-center {
         font-size: 60px;
+    }
+    .logo {
+        width: 255px;
     }
 }
 
