@@ -7,7 +7,7 @@ Website: https://spotify-intersect.herokuapp.com/
 
 ![Final Screen](https://github.com/kaseshib/spotify-intersect/blob/master/static/images/demo.png)
 
-Spotify-Intersect creates a playlist of "liked" songs in Spotify between two users.
+Spotify-Intersect creates a playlist of "liked" songs in common between two users on Spotify.
 
 
 ### Inspiration
@@ -40,4 +40,4 @@ Due to the authorization procedure through Spotify, Spotify-Intersect is only vi
    * `python app.py`
 
 ## Contact
-Kasey Shibayama kaseshib@gmail.com
+Kasey Shibayama - kaseshib@gmail.com
