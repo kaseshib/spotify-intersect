@@ -1,17 +1,18 @@
 # Spotify-Intersect
-https://spotify-intersect.herokuapp.com/
-![Venn Image](https://github.com/kaseshib/spotify-intersect/blob/master/static/images/venn-01.png)
+Website: https://spotify-intersect.herokuapp.com/
+
+<img src="https://github.com/kaseshib/spotify-intersect/blob/master/static/images/venn-01.png" with="300">
 
 ## About The Project
 
-![Final Screen]((https://github.com/kaseshib/spotify-intersect/blob/master/static/images/demo.png))
+![Final Screen](https://github.com/kaseshib/spotify-intersect/blob/master/static/images/demo.png)
 
 Spotify-Intersect creates a playlist of "liked" songs in Spotify between two users.
 
 
 ### Inspiration
 
-Finding shared music in common with a friend is an awesome feeling, and one I hope I can increase by making this app.  Instead of trying to think of random artists that you think your friend *might* like, you can cut straight to the chase with Spotify-Intersect.
+Finding shared music in common with a friend is an awesome feeling, and one I hope I can aid by making this app.  Instead of trying to think of random artists that you think your friend *might* like, you can cut straight to the chase with Spotify-Intersect.
 
 I'm far from the first to think of this idea, [as](https://community.spotify.com/t5/Closed-Ideas/Social-See-Music-in-common-with-Friends/idi-p/4372598) [you](https://community.spotify.com/t5/Closed-Ideas/Songs-you-have-in-common-with-other-users/idi-p/1526320) [can](https://community.spotify.com/t5/Closed-Ideas/Social-Compare-your-Music-Taste-with-Friends/idi-p/1512164) [see](https://community.spotify.com/t5/Closed-Ideas/All-Platforms-Discover-Find-music-in-common-with-friends/idi-p/1436611).
 
