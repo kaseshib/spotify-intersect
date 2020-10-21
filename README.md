@@ -1,4 +1,4 @@
-# Spotify-Intersect
+# Spotify Intersect
 
 https://spotify-intersect.herokuapp.com/
 
